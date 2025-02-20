@@ -1,7 +1,3 @@
-Here's a **professional and detailed `README.md`** for your project. It assumes you're building **QuikServe**, an HTTP/3 web server using **Tokio, Quinn, and Hyper**. You can customize it to fit your project's exact scope.  
-
----
-
 ## **QuikServe** 🚀  
 **A high-performance, lightweight HTTP/3 server built with Rust, powered by Tokio, Quinn, and Hyper.**  
 
