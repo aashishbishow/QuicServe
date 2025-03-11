@@ -1,4 +1,4 @@
-## **QuikServe** 🚀  
+## **QuicServe** 🚀  
 **A high-performance, lightweight HTTP/3 server built with Rust, powered by Tokio, Quinn, and Hyper.**  
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
