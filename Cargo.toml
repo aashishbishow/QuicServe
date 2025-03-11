@@ -1,0 +1,19 @@
+[package]
+name = "QuicServe"
+version = "0.1.0"
+edition = "2024"
+authors = ["Aashish BishowKarma <aashishbishowkarma@outlook.com>"]
+description = "gRPC over HTTP/3 over QUIC"
+repository = "https://github.com/aashishbishow/QuicServe"
+license = "MIT"
+
+[dependencies]
+quinn = "0.10"
+rustls = "0.22"
+tonic = "0.10"
+prost = "0.12"
+tokio = { version = "1.35", features = ["full"] }
+h3 = "0.0.4"
+hyper = "1.1"
+rayon = "1.8"
+async-trait = "0.1"

@@ -1,6 +1,0 @@
-[dependencies]
-tokio = { version = "1", features = ["full"] }
-quinn = "0.10"  # QUIC protocol
-hyper = { version = "0.14", features = ["server"] }  # HTTP server
-rustls = "0.21"  # TLS support (required for QUIC)
-http = "0.2"
