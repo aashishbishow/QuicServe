@@ -75,7 +75,7 @@ QuicServe utilizes several powerful libraries to build its core features:
 - **Debug Profile**: Optimized for debugging.
   
   ```toml
-  [profile.debug]
+  [profile.dev]
   opt-level = 2
   debug = true
   ```
