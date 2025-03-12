@@ -448,7 +448,7 @@ pub extern "C" fn zif_quicserve_create_server_enhanced(
         let service_impl = Arc::new(PhpServiceImpl::new(Arc::clone(&runtime)));
 
         let server_result = runtime.block_on(async {
-            crate::server::Server::new(host_str, port_num, cert_path_str, key_path_str).await
+            crate::server::Server::new(&format!("{}:{}:{}:{}", host_str, port_num, cert_path_str, key_path_str)).await
         });
 
         match server_result {
