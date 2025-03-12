@@ -5,6 +5,7 @@ use std::time::{Duration, Instant};
 
 use anyhow::Result;
 use futures_util::future::Future;
+use libc::rand;
 use log::{debug, error, info, warn};
 use rustls::Certificate;
 use tokio::time;
@@ -119,7 +120,7 @@ pub async fn check_stream_alive(stream: &mut h3_webtransport::session::BidiStrea
 /// Configures logging based on environment variables
 pub fn configure_logging() {
     if std::env::var("RUST_LOG").is_err() {
-        std::env::set_var("RUST_LOG", "info,quicserve=debug");
+        unsafe { std::env::set_var("RUST_LOG", "info,quicserve=debug") };
     }
     env_logger::init();
 }
@@ -169,7 +170,7 @@ pub fn get_local_addresses() -> Vec<std::net::IpAddr> {
 /// Simple random request ID generator
 pub fn generate_request_id() -> u64 {
     use rand::Rng;
-    rand::thread_rng().gen()
+    rand::random::<u64>()
 }
 
 /// Parses a socket address from a string with default port handling
