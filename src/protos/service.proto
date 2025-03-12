@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package quicserve;
+
+// Message for RPC requests
+message RequestProto {
+  // Unique request ID
+  uint64 id = 1;
+  // Method name to call
+  string method = 2;
+  // Serialized payload
+  bytes payload = 3;
+}
+
+// Message for RPC responses
+message ResponseProto {
+  // Request ID this response corresponds to
+  uint64 id = 1;
+  // Response payload (if successful)
+  bytes payload = 2;
+  // Error message (if failed)
+  string error = 3;
+}
+
+// Sample service definition - Users can create their own
+service SampleService {
+  // Simple echo method
+  rpc Echo(EchoRequest) returns (EchoResponse);
+  // Streaming method example
+  rpc StreamData(StreamRequest) returns (stream StreamResponse);
+}
+
+// Sample request message
+message EchoRequest {
+  string message = 1;
+}
+
+// Sample response message
+message EchoResponse {
+  string message = 1;
+}
+
+// Sample streaming request
+message StreamRequest {
+  int32 count = 1;
+  int32 interval_ms = 2;
+}
+
+// Sample streaming response
+message StreamResponse {
+  int32 sequence = 1;
+  string payload = 2;
+  int64 timestamp = 3;
+}
