@@ -42,6 +42,9 @@ tokio = { version = "1.44.0", features = ["full"] }
 # Parallelism
 rayon = "1.10.0"
 
+# Command Line Parsing
+clap = "4.5.32"
+
 # FFI support
 libc = "0.2.171"    
 cbindgen = "0.28.0"
