@@ -382,7 +382,9 @@ fn quicserve(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     
     // Initialize logging
     if std::env::var("RUST_LOG").is_err() {
-        std::env::set_var("RUST_LOG", "info,quicserve=debug");
+        unsafe {
+            std::env::set_var("RUST_LOG", "info,quicserve=debug");
+        }
     }
     env_logger::init_from_env(
         env_logger::Env::default().filter_or(env_logger::DEFAULT_FILTER_ENV, "info")
