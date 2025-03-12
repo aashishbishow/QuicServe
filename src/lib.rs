@@ -28,16 +28,18 @@ use tokio::time;
 
 // Public modules
 pub mod client;
-pub mod codec;
 pub mod config;
 pub mod error;
 pub mod server;
 pub mod transport;
+pub mod utils;
 
 // Re-exports
 pub use client::Client;
 pub use error::Error;
 pub use server::Server;
+pub use transport::Transport;
+
 
 /// Protocol ID for WebTransport over HTTP/3
 pub const WEBTRANSPORT_PROTOCOL: &[u8] = b"webtransport";
