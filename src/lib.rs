@@ -33,6 +33,7 @@ pub mod error;
 pub mod server;
 pub mod transport;
 pub mod utils;
+pub mod bindings;
 
 // Re-exports
 pub use client::Client;
