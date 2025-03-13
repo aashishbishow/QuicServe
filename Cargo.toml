@@ -22,9 +22,12 @@ h3 = "0.0.6"
 
 # WebTransport
 h3-webtransport = "0.1.0"
+futures-util = "0.3.31"
 
+async-trait = "0.1.87"
 # TLS
 rustls = "0.23.23"
+# aws-lc-sys ="0.27.0"
 
 # Serialization
 serde = { version = "1.0.219", features = ["derive"] }

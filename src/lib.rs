@@ -34,6 +34,7 @@ pub mod server;
 pub mod transport;
 pub mod utils;
 pub mod bindings;
+pub mod proto;
 
 // Re-exports
 pub use client::Client;
